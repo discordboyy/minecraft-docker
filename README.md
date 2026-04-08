@@ -1,29 +1,29 @@
 # minecraft-docker
 
-                   ┌─────────────────────┐
-                   │     GitHub Repo      │
-                   │  - server configs    │
-                   │  - plugins/mods      │
-                   │  - backup scripts    │
-                   └─────────┬───────────┘
-                             │ Pull / Update
-                             ▼
-                   ┌─────────────────────┐
-                   │   Host Machine / PC  │
-                   │  - Minecraft Server │
-                   │    (Java/Bedrock)   │
-                   │  - Docker optional  │
-                   │  - Local scripts    │
-                   └─────────┬───────────┘
-                             │ Reads / Writes
-          ┌──────────────────┼──────────────────┐
-          │                  │                  │
-          ▼                  ▼                  ▼
-┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐
-│  World Folder   │  │ Local Database  │  │ Backup Scripts  │
-│  (/mc-world)    │  │ PostgreSQL /    │  │ Powershell,     │
-│  Persistent     │  │ MySQL locally   │  │ Cron jobs       │
-└─────────────────┘  └─────────────────┘  └─────────────────┘
+                                      ┌─────────────────────┐
+                                      │     GitHub Repo      │
+                                      │  - server configs    │
+                                      │  - plugins/mods      │
+                                      │  - backup scripts    │
+                                      └─────────┬───────────┘
+                                                │ Pull / Update
+                                                ▼
+                                      ┌─────────────────────┐
+                                      │   Host Machine / PC  │
+                                      │  - Minecraft Server │
+                                      │    (Java/Bedrock)   │
+                                      │  - Docker optional  │
+                                      │  - Local scripts    │
+                                      └─────────┬───────────┘
+                                                │ Reads / Writes
+                             ┌──────────────────┼──────────────────┐
+                             │                  │                  │
+                             ▼                  ▼                  ▼
+                   ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐
+                   │  World Folder   │  │ Local Database  │  │ Backup Scripts  │
+                   │  (/mc-world)    │  │ PostgreSQL /    │  │ Powershell,     │
+                   │  Persistent     │  │ MySQL locally   │  │ Cron jobs       │
+                   └─────────────────┘  └─────────────────┘  └─────────────────┘
 
 
 Explanation
@@ -71,7 +71,7 @@ world → your Minecraft world files
 plugins → server plugins or mods
 config → server configuration files (server.properties, etc.)
 data → any extra data like scripts, backups
-2. Create a Dockerfile
+3. Create a Dockerfile
 
 In ~/minecraft-server/Dockerfile:
 
